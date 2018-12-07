@@ -1,0 +1,25 @@
+.mat-toolbar {
+  display: flex;
+}
+
+.mainHeading {
+  text-align: center;
+}
+
+.myMenuBar {
+  background-color: #FFFFFF;
+  border: 1px solid #b0b0b0;
+}
+
+.footer {
+  background-color: #FFFFFF;
+  border: 1px solid #b0b0b0;
+}
+
+.toolbar_button {
+  flex: 1 1 auto;
+}
+
+.wrapper {
+  min-height: calc(100vh - 87px);
+}
