@@ -1,3 +1,8 @@
+#loginButton {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mat-toolbar {
   display: flex;
 }
@@ -11,13 +16,18 @@
   border: 1px solid #b0b0b0;
 }
 
-.footer {
-  background-color: #FFFFFF;
-  border: 1px solid #b0b0b0;
+.mat-toolbar {
+  background-color: #FFFB19;
+  border-radius: 0.5em;
 }
 
 .toolbar_button {
   flex: 1 1 auto;
+}
+
+#toolbarButtons {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wrapper {

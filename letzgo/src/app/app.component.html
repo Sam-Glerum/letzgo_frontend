@@ -6,16 +6,18 @@
     <h1 > {{ mainHeading }}</h1>
   </div>
 
-  <mat-toolbar class="myMenuBar" color="link">
+  <mat-toolbar class="myMenuBar" color="primary">
+    <div layout="column" id="toolbarButtons">
       <span><button class="toolbar_button" mat-raised-button color="primary">Concerts</button></span>
       <span><button class="toolbar_button" mat-raised-button color="primary">Artists</button></span>
       <span><button class="toolbar_button" mat-raised-button color="primary"><span>Tickets</span></button></span>
+    </div>
   </mat-toolbar>
 </div>
 
 <footer class="footer">
   <mat-toolbar class="footer_toolbar flex">
-    <button mat-fab color="primary">Login</button>
+    <button id="loginButton" mat-fab color="primary">Login</button>
   </mat-toolbar>
 </footer>
 </body>
