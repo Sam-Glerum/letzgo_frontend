@@ -3,26 +3,31 @@
 <div class="wrapper">
 
   <div class="mainHeading">
-    <h1> {{ mainHeading }}</h1>
+    <a routerLink="/"><h1> {{ mainHeading }}</h1></a>
   </div>
 
   <mat-toolbar class="myMenuBar" color="primary">
     <div layout="column" id="toolbarButtons">
-      <span><button class="toolbar_button" mat-raised-button color="primary">Concerts</button></span>
+      <span><a routerLink="/concerts"><button class="toolbar_button" mat-raised-button color="primary">Concerts</button></a></span>
       <span><button class="toolbar_button" mat-raised-button color="primary">Artists</button></span>
       <span><button class="toolbar_button" mat-raised-button color="primary"><span>Tickets</span></button></span>
     </div>
   </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
 </div>
 
-<app-concert></app-concert>
+
+
+
 
 <footer class="footer">
   <mat-toolbar class="footer_toolbar flex">
-    <button id="loginButton" mat-fab color="primary">Login</button>
+    <button id="loginButton" mat-fab color="primary"><a routerLink="login">Login</a></button>
   </mat-toolbar>
 </footer>
 </body>
 
 
-<router-outlet></router-outlet>
+

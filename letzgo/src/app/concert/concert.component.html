@@ -1,10 +1,7 @@
-<p >
-  concert works!
-</p>
-{{concertsArray.concerts[1].name}}
-
-<ul>
-<li *ngFor="let concert of concertsArray">
- {{concert}}
-</li>
-</ul>
+<!--<ul>-->
+<mat-card *ngFor="let concert of concertsArray.concerts">
+  <!--<mat-card>-->
+  <mat-card-title><a routerLink="/concertDetail/{{concert._id}}">{{concert.name}}</a></mat-card-title>
+  </mat-card>
+<!--</mat-card>-->
+<!--</ul>-->
