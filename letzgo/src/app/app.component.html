@@ -10,7 +10,7 @@
     <div layout="column" id="toolbarButtons">
       <span><a routerLink="/concerts"><button class="toolbar_button" mat-raised-button color="primary">Concerts</button></a></span>
       <span><a routerLink="/artists"><button class="toolbar_button" mat-raised-button color="primary">Artists</button></a></span>
-      <span><button class="toolbar_button" mat-raised-button color="primary"><span>Tickets</span></button></span>
+      <span><a routerLink="/tickets"><button class="toolbar_button" mat-raised-button color="primary"><span>Tickets</span></button></a></span>
     </div>
   </mat-toolbar>
 
@@ -24,7 +24,11 @@
 
 <footer class="footer">
   <mat-toolbar class="footer_toolbar flex">
-    <button id="loginButton" mat-fab color="primary"><a routerLink="login">Login</a></button>
+    <a routerLink="login"><button id="loginButton" mat-fab color="primary">Login</button></a>
+    <div id="loginInfo" *ngIf="loggedInUser">
+      <p> Logged in as {{username}}</p>
+    </div>
+    <button (click)="logoutUser()" id="logoutButton" mat-fab color="primary">Logout</button>
   </mat-toolbar>
 </footer>
 </body>

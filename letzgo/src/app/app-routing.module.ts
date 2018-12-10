@@ -9,6 +9,7 @@ import { RegisterComponent } from "../components/register/register.component";
 import { ArtistComponent } from "../components/artist/artist.component";
 import { TicketComponent } from "../components/ticket/ticket.component";
 import {ArtistDetailComponent} from "../components/artist-detail/artist-detail.component";
+import {AppComponent} from "./app.component";
 
 
 const routes: Routes = [
@@ -22,7 +23,7 @@ const routes: Routes = [
   ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
