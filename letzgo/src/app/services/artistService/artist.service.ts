@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import {Observable, of} from "rxjs/index";
-import {Concert} from "./concert";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Artist} from "../../../artist";
+import {Observable} from "rxjs/index";
 import {map} from "rxjs/internal/operators";
 
 const httpOptions = {
@@ -11,12 +11,11 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+export class ArtistService {
 
-export class ConcertService {
+  constructor(private http: HttpClient) { }
 
-  constructor(private http:HttpClient) { }
-
-  getConcerts(): Observable<Concert[]> {
-    return this.http.get<Concert[]>('https://letzgo.herokuapp.com/api/concerts', httpOptions).pipe(map (data => data))
+  getArtists(): Observable<Artist[]> {
+    return this.http.get<Artist[]>('https://letzgo.herokuapp.com/api/artists', httpOptions).pipe(map (data => data))
   }
 }

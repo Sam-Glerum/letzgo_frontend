@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material.module";
-import { ConcertComponent } from './concert/concert.component';
+import { ConcertComponent } from '../components/concert/concert.component';
 import { HttpClientModule } from "@angular/common/http";
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { ArtistComponent } from './artist/artist.component';
-import { TicketComponent } from './ticket/ticket.component';
-import { ConcertDetailComponent } from './concert-detail/concert-detail.component';
+import { LoginComponent } from '../components/login/login.component';
+import { RegisterComponent } from '../components/register/register.component';
+import { ArtistComponent } from '../components/artist/artist.component';
+import { TicketComponent } from '../components/ticket/ticket.component';
+import { ConcertDetailComponent } from '../components/concert-detail/concert-detail.component';
+import { ArtistDetailComponent } from '../components/artist-detail/artist-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ConcertDetailComponent } from './concert-detail/concert-detail.componen
     RegisterComponent,
     ArtistComponent,
     TicketComponent,
-    ConcertDetailComponent
+    ConcertDetailComponent,
+    ArtistDetailComponent
   ],
   imports: [
     BrowserModule,

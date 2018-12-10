@@ -1,0 +1,4 @@
+<mat-card *ngFor="let artist of artistArray.artists">
+  <!--<mat-card>-->
+  <mat-card-title><a routerLink="/artistDetail/{{artist._id}}">{{artist.name}}</a></mat-card-title>
+</mat-card>

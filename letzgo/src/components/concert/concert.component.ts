@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ConcertService } from "../concert.service";
-import {Concert} from "../concert";
+import { ConcertService } from "../../app/services/concertService/concert.service";
+import {Concert} from "../../app/concert";
 import {Observable} from "rxjs/index";
 
 @Component({
