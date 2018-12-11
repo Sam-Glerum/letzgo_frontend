@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {AuthenticationService} from "../../app/services/authenticationService/authentication.service";
-import { ActivatedRoute } from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import { Location } from "@angular/common";
 
 @Component({
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
 });
 
-  constructor(private route: ActivatedRoute, private authenticationService: AuthenticationService, private location: Location) { }
+  constructor(private route: ActivatedRoute, private authenticationService: AuthenticationService, private location: Location, private router: Router) { }
 
   goBack(): void {
     this.location.back();
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     let username = this.profileForm.controls.username.value;
     let password = this.profileForm.controls.password.value;
     this.authenticationService.loginUser(username, password);
-    this.goBack();
+    this.router.navigate(["/concerts"]);
     // this.authenticationService.loginUser(this.profileForm.controls['username'].value, this.profileForm.controls['password'].value);
   }
 

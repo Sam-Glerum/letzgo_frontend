@@ -12,8 +12,9 @@ export class TicketComponent implements OnInit {
   constructor(private ticketService: TicketService) { }
 
   ticketsArray: Ticket[];
+  concertTitle: string;
 
-  getTickets() {
+  getTickets(): void {
     this.ticketService.getTickets()
       .subscribe(tickets => {
         this.ticketsArray = tickets;

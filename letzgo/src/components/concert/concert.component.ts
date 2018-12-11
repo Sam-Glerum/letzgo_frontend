@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConcertService } from "../../app/services/concertService/concert.service";
 import {Concert} from "../../app/concert";
-import {Observable} from "rxjs/index";
 
 @Component({
   selector: 'app-concert',

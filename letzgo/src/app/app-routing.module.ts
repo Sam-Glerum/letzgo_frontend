@@ -9,16 +9,19 @@ import { RegisterComponent } from "../components/register/register.component";
 import { ArtistComponent } from "../components/artist/artist.component";
 import { TicketComponent } from "../components/ticket/ticket.component";
 import {ArtistDetailComponent} from "../components/artist-detail/artist-detail.component";
+import {TicketdetailComponent} from "../components/ticketdetail/ticketdetail.component";
+import { AuthenticationGuardService } from "./services/authenticationGuardService/authentication-guard.service";
 
 
 const routes: Routes = [
-  {path: 'concerts', component: ConcertComponent},
-  {path: 'concertDetail/:id', component: ConcertDetailComponent},
+  {path: 'concerts', component: ConcertComponent, canActivate: [AuthenticationGuardService]},
+  {path: 'concertDetail/:id', component: ConcertDetailComponent, canActivate: [AuthenticationGuardService]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'artists', component: ArtistComponent},
-  {path: 'artistDetail/:id', component: ArtistDetailComponent},
-  {path: 'tickets', component: TicketComponent}
+  {path: 'artists', component: ArtistComponent, canActivate: [AuthenticationGuardService]},
+  {path: 'artistDetail/:id', component: ArtistDetailComponent, canActivate: [AuthenticationGuardService]},
+  {path: 'tickets', component: TicketComponent, canActivate: [AuthenticationGuardService]},
+  {path: 'ticketDetail/:id', component: TicketdetailComponent, canActivate: [AuthenticationGuardService]}
   ];
 
 @NgModule({
