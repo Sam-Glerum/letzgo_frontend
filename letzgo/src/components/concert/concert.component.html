@@ -1,7 +1,9 @@
 <!--<ul>-->
-<mat-card *ngFor="let concert of concertsArray.concerts">
+<div class="row">
+<mat-card class="col-md-6 concertCard" *ngFor="let concert of concertsArray.concerts">
   <!--<mat-card>-->
-  <mat-card-title><a routerLink="/concertDetail/{{concert._id}}">{{concert.name}}</a></mat-card-title>
-  </mat-card>
+  <a routerLink="/concertDetail/{{concert._id}}"><mat-card-title>{{concert.name}}</mat-card-title></a>
+</mat-card>
+</div>
 <!--</mat-card>-->
 <!--</ul>-->

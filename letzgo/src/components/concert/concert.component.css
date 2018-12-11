@@ -1,0 +1,11 @@
+.concertCard {
+  /*flex: 1 0 auto;*/
+  text-align: center;
+  /*margin: 0.5em;*/
+  /*width: 40%;*/
+  background-color: #4088FF;
+}
+
+.mat-card-title {
+  color: white;
+}
