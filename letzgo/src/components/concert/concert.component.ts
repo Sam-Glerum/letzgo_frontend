@@ -21,7 +21,7 @@ export class ConcertComponent implements OnInit {
     this.concertService.getConcerts()
       .subscribe(concerts => {
         this.concertsArray = concerts;
-        console.log(this.concertsArray);
+        console.log(concerts);
       });
   }
 

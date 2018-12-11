@@ -18,6 +18,8 @@ export class ConcertService {
   constructor(private http:HttpClient) { }
 
   getConcerts(): Observable<Concert[]> {
+
+    console.log("Token: " + token);
     return this.http.get<Concert[]>('https://letzgo.herokuapp.com/api/concerts', httpOptions).pipe(map (data => data))
   }
 

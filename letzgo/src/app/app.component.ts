@@ -20,6 +20,11 @@ export class AppComponent {
   logoutUser(): void {
     this.authenticationService.logout();
     window.alert("Logged out succesfully");
+    this.location.back();
+  }
+
+  isLoggedIn(): boolean {
+    return this.authenticationService.isAuthenticated();
   }
 
 

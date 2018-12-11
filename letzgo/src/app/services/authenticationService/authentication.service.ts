@@ -26,7 +26,7 @@ export class AuthenticationService {
       dateofbirth: dateofbirth
     }, this.httpOptions)
       .subscribe(res => {
-        localStorage.setItem("Token", res[0].token);
+        localStorage.setItem("Token", res.token);
       },
         error => {
         console.log(error);
@@ -35,10 +35,10 @@ export class AuthenticationService {
 
   loginUser(username: string, password: string){
     console.log("Login: " + username + " has been logged in");
-    this.http.post<any>(this.apiUrl + '/login', {username: username, password: password}, this.httpOptions)
+    this.http.post<any>(this.apiUrl + '/login', {username: username, password: password})
       .subscribe(
         (res) => {
-          localStorage.setItem("Token", res[0].token);
+          localStorage.setItem("Token", res.token);
           localStorage.setItem("Username", username);
         },
         (error) => console.log(error)
