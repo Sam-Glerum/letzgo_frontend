@@ -15,18 +15,15 @@ export class ConcertComponent implements OnInit {
   concertsArray: Concert[];
 
 
-
-
-  getHeroes(): void {
+  getConcerts(): void {
     this.concertService.getConcerts()
       .subscribe(concerts => {
         this.concertsArray = concerts;
-        console.log(concerts);
       });
   }
 
   ngOnInit() {
-    this.getHeroes();
+    this.getConcerts();
 
   }
 

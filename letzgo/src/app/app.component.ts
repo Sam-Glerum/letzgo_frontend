@@ -10,7 +10,6 @@ import { Location } from "@angular/common";
 export class AppComponent {
   mainHeading = 'LetzGo';
   title = 'letzgo';
-  username = '';
 
 
   constructor(private authenticationService: AuthenticationService, private location: Location) {
@@ -26,6 +25,4 @@ export class AppComponent {
   isLoggedIn(): boolean {
     return this.authenticationService.isAuthenticated();
   }
-
-
 }

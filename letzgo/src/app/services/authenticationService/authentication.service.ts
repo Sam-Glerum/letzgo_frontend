@@ -19,13 +19,13 @@ export class AuthenticationService {
 
   register(username: string, email: string, password: string, dateofbirth: Date) {
     console.log("User " + username + " has been registered");
-    this.http.post(this.apiUrl + '/register', {
+    this.http.post<any>(this.apiUrl + '/register', {
       username: username,
       email: email,
       password: password,
       dateofbirth: dateofbirth
-    }, this.httpOptions)
-      .subscribe(res => {
+    })
+      .subscribe((res) => {
         localStorage.setItem("Token", res.token);
       },
         error => {
@@ -36,8 +36,7 @@ export class AuthenticationService {
   loginUser(username: string, password: string){
     console.log("Login: " + username + " has been logged in");
     this.http.post<any>(this.apiUrl + '/login', {username: username, password: password})
-      .subscribe(
-        (res) => {
+      .subscribe((res) => {
           localStorage.setItem("Token", res.token);
           localStorage.setItem("Username", username);
         },
