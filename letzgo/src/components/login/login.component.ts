@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
     let username = this.profileForm.controls.username.value;
     let password = this.profileForm.controls.password.value;
     this.authenticationService.loginUser(username, password);
-    console.log("form " + this.profileForm.controls.username.value);
     this.goBack();
     // this.authenticationService.loginUser(this.profileForm.controls['username'].value, this.profileForm.controls['password'].value);
   }

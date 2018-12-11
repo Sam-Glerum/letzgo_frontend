@@ -5,9 +5,12 @@ import { TicketComponent } from "../../../components/ticket/ticket.component";
 import {Ticket} from "../../ticket";
 import {map} from "rxjs/internal/operators";
 
+const token = localStorage.getItem("Token");
+
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json', 'X-Access-Token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDQ2NDQ3ODQsImlhdCI6MTU0NDIxMjc4NCwic3ViIjoiamltc3dlZXdlZGRtIn0.DezLbFTig-U--aizVx2lNNcO8RyZbHX5YlpVoY_ExsY'})
+  headers: new HttpHeaders({'Content-Type': 'application/json', 'X-Access-Token': token})
 };
+let url = "https://letzgo.herokuapp.com/api/tickets";
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +20,15 @@ export class TicketService {
   constructor(private http:HttpClient) { }
 
   getTickets(): Observable<Ticket[]> {
-    return this.http.get<Ticket[]>("https://letzgo.herokuapp.com/api/tickets", httpOptions).pipe(map (data => data))
+    return this.http.get<Ticket[]>(url, httpOptions).pipe(map (data => data))
+  }
+
+  addTicket(concertId, userId) {
+    this.http.post(url + '/' + concertId + '/' + userId, httpOptions)
+      .subscribe(res => {
+        console.log("response:" +res)
+      }, error => {
+        console.log(error);
+      });
   }
 }

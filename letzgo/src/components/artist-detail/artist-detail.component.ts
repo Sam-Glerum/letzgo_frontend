@@ -9,7 +9,7 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./artist-detail.component.css']
 })
 export class ArtistDetailComponent implements OnInit {
-  artist = Artist;
+  artist: Artist;
   artistId = '';
 
   constructor(private artistService: ArtistService, private route:ActivatedRoute) { }

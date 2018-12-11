@@ -15,6 +15,7 @@ import { ArtistComponent } from '../components/artist/artist.component';
 import { TicketComponent } from '../components/ticket/ticket.component';
 import { ConcertDetailComponent } from '../components/concert-detail/concert-detail.component';
 import { ArtistDetailComponent } from '../components/artist-detail/artist-detail.component';
+import { LoginDetailComponent } from '../components/login-detail/login-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ArtistDetailComponent } from '../components/artist-detail/artist-detail
     ArtistComponent,
     TicketComponent,
     ConcertDetailComponent,
-    ArtistDetailComponent
+    ArtistDetailComponent,
+    LoginDetailComponent
   ],
   imports: [
     BrowserModule,

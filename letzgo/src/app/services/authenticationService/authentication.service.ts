@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
+
+
+
 export class AuthenticationService {
   private apiUrl = "https://letzgo.herokuapp.com/api";
+  private httpOptions;
+  constructor(private http: HttpClient) {
+    this.httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+  }
 
-  constructor(private http: HttpClient) { }
 
   register(username: string, email: string, password: string, dateofbirth: Date) {
     console.log("User " + username + " has been registered");
@@ -16,9 +24,9 @@ export class AuthenticationService {
       email: email,
       password: password,
       dateofbirth: dateofbirth
-    })
+    }, this.httpOptions)
       .subscribe(res => {
-        localStorage.setItem("Token", res.token);
+        localStorage.setItem("Token", res[0].token);
       },
         error => {
         console.log(error);
@@ -27,10 +35,10 @@ export class AuthenticationService {
 
   loginUser(username: string, password: string){
     console.log("Login: " + username + " has been logged in");
-    this.http.post<any>(this.apiUrl + '/login', {username: username, password: password})
+    this.http.post<any>(this.apiUrl + '/login', {username: username, password: password}, this.httpOptions)
       .subscribe(
         (res) => {
-          localStorage.setItem("Token", res.token);
+          localStorage.setItem("Token", res[0].token);
           localStorage.setItem("Username", username);
         },
         (error) => console.log(error)

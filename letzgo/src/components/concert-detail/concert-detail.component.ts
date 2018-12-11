@@ -4,6 +4,7 @@ import {ConcertService} from "../../app/services/concertService/concert.service"
 import {Concert} from "../../app/concert";
 import {ActivatedRoute} from "@angular/router";
 import {TicketService} from "../../app/services/ticketService/ticket.service";
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-concert-detail',
@@ -11,9 +12,9 @@ import {TicketService} from "../../app/services/ticketService/ticket.service";
   styleUrls: ['./concert-detail.component.css']
 })
 export class ConcertDetailComponent implements OnInit {
-  constructor(private concertService: ConcertService, private route:ActivatedRoute, private ticketService: TicketService) { }
+  constructor(private concertService: ConcertService, private route:ActivatedRoute, private ticketService: TicketService, private location: Location) { }
 
-  concert = Concert;
+  concert: Concert;
   concertId = '';
 
   ngOnInit() {
@@ -27,9 +28,13 @@ export class ConcertDetailComponent implements OnInit {
     });
   }
 
+  goBack() {
+    this.location.back();
+  }
+
   getConcert(): void {
 
-    this.concert = this.concertService.getConcert(this.concertId)
+    this.concertService.getConcert(this.concertId)
       .subscribe((concert => {
         this.concert = concert;
       }));

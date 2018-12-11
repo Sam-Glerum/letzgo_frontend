@@ -4,8 +4,9 @@ import {Observable, of} from "rxjs/index";
 import {Concert} from "../../concert";
 import {map} from "rxjs/internal/operators";
 
+const token = localStorage.getItem("Token");
 const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json', 'X-Access-Token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDQ2NDQ3ODQsImlhdCI6MTU0NDIxMjc4NCwic3ViIjoiamltc3dlZXdlZGRtIn0.DezLbFTig-U--aizVx2lNNcO8RyZbHX5YlpVoY_ExsY'})
+  headers: new HttpHeaders({'Content-Type': 'application/json', 'X-Access-Token': token})
 };
 
 @Injectable({
@@ -18,5 +19,9 @@ export class ConcertService {
 
   getConcerts(): Observable<Concert[]> {
     return this.http.get<Concert[]>('https://letzgo.herokuapp.com/api/concerts', httpOptions).pipe(map (data => data))
+  }
+
+  getConcert(concertId: string): Observable<Concert> {
+    return this.http.get<Concert>('https://letzgo.herokuapp.com/api/concerts/' + concertId, httpOptions).pipe(map (data => data))
   }
 }

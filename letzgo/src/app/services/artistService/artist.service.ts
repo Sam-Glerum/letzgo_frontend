@@ -18,4 +18,8 @@ export class ArtistService {
   getArtists(): Observable<Artist[]> {
     return this.http.get<Artist[]>('https://letzgo.herokuapp.com/api/artists', httpOptions).pipe(map (data => data))
   }
+
+  getArtist(artistId: string): Observable<Artist> {
+    return this.http.get<Artist>('https://letzgo.herokuapp.com/api/artists/' + artistId, httpOptions).pipe(map(data => data));
+  }
 }
