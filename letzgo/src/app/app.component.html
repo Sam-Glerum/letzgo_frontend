@@ -1,23 +1,27 @@
 <!-- Main heading -->
 <!-- Latest compiled and minified CSS -->
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 
 <body>
 <div class="container-fluid">
 <div class="wrapper">
 
-  <div class="mainHeading">
-    <a routerLink="/"><h1> {{ mainHeading }}</h1></a>
-  </div>
+  <!--<div class="mainHeading">-->
+    <!--<a routerLink="/"><h1> {{ mainHeading }}</h1></a>-->
+  <!--</div>-->
 
   <mat-toolbar class="myMenuBar" color="primary">
-    <div layout="column" id="toolbarButtons">
-      <span><a routerLink="/concerts"><button class="toolbar_button" mat-raised-button color="primary">Concerts</button></a></span>
-      <span><a routerLink="/artists"><button class="toolbar_button" mat-raised-button color="primary">Artists</button></a></span>
-      <span><a routerLink="/tickets"><button class="toolbar_button" mat-raised-button color="primary"><span>Tickets</span></button></a></span>
+    <div>
+      <span><h1 id="mainHeading"> {{ mainHeading }}</h1></span>
     </div>
+      <div layout="column" id="toolbarButtons">
+
+        <span><a routerLink="/concerts"><button class="toolbar_button" mat-raised-button color="primary">Concerts</button></a></span>
+        <span><a routerLink="/artists"><button class="toolbar_button" mat-raised-button color="primary">Artists</button></a></span>
+        <span><a routerLink="/tickets"><button class="toolbar_button" mat-raised-button color="primary"><span>Tickets</span></button></a></span>
+      </div>
   </mat-toolbar>
 
 

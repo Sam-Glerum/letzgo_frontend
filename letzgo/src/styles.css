@@ -7,7 +7,7 @@
 
 /*}*/
 
-.container-fluid {
+body {
   background-image: url("/assets/images/jeff-mills-bottle-ravejungle.jpg") !important;
   background-repeat: no-repeat, repeat;
   background-position: center;
@@ -15,12 +15,18 @@
 }
 
 .mat-card {
-  color: white;
   background-color: #4088FF;
+  margin-top: 1em;
+  padding: 2em;
+  border: 3px solid;
+  color: white;
 }
 
 .mat-card-title {
   text-align: center;
-  text-decoration: underline;
+  color: white;
 }
 
+p, button, a {
+  font-family: 'Bungee', cursive !important;
+}
