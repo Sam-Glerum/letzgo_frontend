@@ -17,6 +17,7 @@ export class TicketdetailComponent implements OnInit {
   ticketId = '';
   concertId = '';
   concert: Concert;
+  concertName: string;
 
   constructor(private ticketService: TicketService, private concertService: ConcertService, private route:ActivatedRoute) { }
 
@@ -31,26 +32,31 @@ export class TicketdetailComponent implements OnInit {
       .subscribe((ticket => {
         this.ticket = ticket;
         this.concertId = ticket.concert;
-        console.log("ID" + this.concertId);
       }));
+  }
+
+  getConcertName(): void {
+    this.concertService.getConcert(this.concertId)
+      .subscribe((concert) =>{
+        this.concertName = concert.name;
+      } )
   }
 
   getConcert(): void {
     this.concertService.getConcert(this.concertId)
       .subscribe((concert => {
-        if (this.concertId === concert.id) {
-          this.concert = concert;
-          console.log(this.concert);
-        }
-
+        this.concert = concert;
+        // if (this.concertId === concert.id) {
+        //   this.concert = concert;
+        // }
       }))
   }
 
   ngOnInit() {
     this.getTicketId();
     this.getTicket();
+    this.getConcertName();
     this.getConcert();
-
   }
 
 }

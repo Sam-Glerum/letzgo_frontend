@@ -17,7 +17,7 @@ export class ArtistComponent implements OnInit {
     this.artistService.getArtists()
       .subscribe(artists => {
         this.artistArray = artists;
-        console.log(this.artistArray);
+        console.log(artists);
       })
   }
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ConcertComponent } from "../concert/concert.component";
 import {ConcertService} from "../../app/services/concertService/concert.service";
 import {Concert} from "../../app/concert";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {TicketService} from "../../app/services/ticketService/ticket.service";
 import {Location} from "@angular/common";
 
@@ -12,7 +12,7 @@ import {Location} from "@angular/common";
   styleUrls: ['./concert-detail.component.css']
 })
 export class ConcertDetailComponent implements OnInit {
-  constructor(private concertService: ConcertService, private route:ActivatedRoute, private ticketService: TicketService, private location: Location) { }
+  constructor(private concertService: ConcertService, private route:ActivatedRoute, private ticketService: TicketService, private location: Location, private router: Router) { }
 
   concert: Concert;
   concertId = '';
@@ -43,7 +43,8 @@ export class ConcertDetailComponent implements OnInit {
   buyTicket(): void {
     console.log("concert: " + this.concertId);
     console.log("username: " + localStorage.getItem("Username"));
-    this.ticketService.addTicket(this.concertId, localStorage.getItem("Username"));
+    this.ticketService.addTicket(this.concertId, localStorage.getItem("Username"))
+    this.router.navigate(["/tickets"]);
   }
 
 }
