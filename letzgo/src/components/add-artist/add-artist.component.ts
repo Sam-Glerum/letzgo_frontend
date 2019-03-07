@@ -12,7 +12,8 @@ export class AddArtistComponent implements OnInit {
   artistForm = new FormGroup({
     name: new FormControl(''),
     genre: new FormControl(''),
-    description: new FormControl(''),
+    imageUrl: new FormControl(''),
+    description: new FormControl('')
   });
 
   constructor(private artistService: ArtistService, private router: Router) { }
@@ -22,10 +23,10 @@ export class AddArtistComponent implements OnInit {
 
   onSubmit() {
     let name = this.artistForm.controls.name.value;
-    let artistImage = this.artistForm.controls.imageUrl.value;
+    let imageUrl = this.artistForm.controls.imageUrl.value;
     let genre = this.artistForm.controls.genre.value;
     let description = this.artistForm.controls.description.value;
-    this.artistService.addArtist(name, description);
+    this.artistService.addArtist(name, imageUrl, genre, description);
     this.router.navigate(["/artists"])
   }
 

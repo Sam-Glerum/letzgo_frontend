@@ -25,9 +25,11 @@ export class ArtistService {
     return this.http.get<any>('https://letzgo.herokuapp.com/api/artists/' + artistId, httpOptions).pipe(map(data => data));
   }
 
-  addArtist(name: string, description: string){
-    this.http.post('https://letzgo.herokuapp.com/api/artists/', {
+  addArtist(name: string, imageUrl: string, genre: string, description: string){
+    this.http.post<any>('https://letzgo.herokuapp.com/api/artists', {
       "name": name,
+      "picture": imageUrl,
+      "genre": genre,
       "description": description
     })
   }
