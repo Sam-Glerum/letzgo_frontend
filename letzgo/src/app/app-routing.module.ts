@@ -11,6 +11,7 @@ import { TicketComponent } from "../components/ticket/ticket.component";
 import {ArtistDetailComponent} from "../components/artist-detail/artist-detail.component";
 import {TicketdetailComponent} from "../components/ticketdetail/ticketdetail.component";
 import { AuthenticationGuardService } from "./services/authenticationGuardService/authentication-guard.service";
+import {AddArtistComponent} from "../components/add-artist/add-artist.component";
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'artists', component: ArtistComponent, canActivate: [AuthenticationGuardService]},
+  {path: 'artists/addArtist', component: AddArtistComponent, canActivate: [AuthenticationGuardService]},
   {path: 'artistDetail/:id', component: ArtistDetailComponent, canActivate: [AuthenticationGuardService]},
   {path: 'tickets', component: TicketComponent, canActivate: [AuthenticationGuardService]},
   {path: 'ticketDetail/:id', component: TicketdetailComponent, canActivate: [AuthenticationGuardService]}
