@@ -28,6 +28,10 @@ export class ArtistDetailComponent implements OnInit {
       });
   }
 
+  deleteArtist() {
+    this.artistService.deleteArtist(this.artistId);
+  }
+
   ngOnInit() {
     this.getArtistId();
     this.getArtist();

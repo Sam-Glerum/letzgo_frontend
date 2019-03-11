@@ -31,6 +31,10 @@ export class ArtistService {
       "picture": imageUrl,
       "genre": genre,
       "description": description
-    })
+    }, httpOptions)
+  }
+
+  deleteArtist(artistId: string) {
+    this.http.delete<any>('https://letzgo.herokuapp.com/api/artists/' + artistId, httpOptions);
   }
 }

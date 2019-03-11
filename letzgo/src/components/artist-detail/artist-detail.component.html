@@ -9,6 +9,7 @@
         <br>
         <p *ngFor="let track of artist.discography">Title: {{track.title}} <br> Release year: {{track.releaseYear}}</p>
       </mat-card-content>
+      <button (click)="deleteArtist()">Delete artist</button>
     </mat-card>
   </div>
 </div>
