@@ -1,7 +1,7 @@
 <div class="row">
-<mat-card class="col-md-6 col-md-offset-3" *ngFor="let artist of artistArray.artists">
+<mat-card class="col-md-6 col-md-offset-3 concertCard" *ngFor="let artist of artistArray.artists">
   <!--<mat-card>-->
   <a routerLink="/artistDetail/{{artist._id}}"><mat-card-title>{{artist.name}}</mat-card-title></a>
 </mat-card>
-  <button routerLink="/artists/addArtist">Add artist</button>
+  <button mat-fab color="primary" routerLink="/artists/addArtist">Add artist</button>
 </div>
