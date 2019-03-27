@@ -6,16 +6,17 @@ import {map} from "rxjs/internal/operators";
 
 const token = localStorage.getItem("Token");
 
-const httpOptions = {
-  headers: new HttpHeaders({'Content-Type': 'application/json', 'X-Access-Token': token})
-};
-
 @Injectable({
   providedIn: 'root'
 })
 export class ArtistService {
+  private httpOptions;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json', 'X-Access-Token': token})
+    }
+  }
 
   getArtists(): Observable<Artist[]> {
     return this.http.get<any[]>('https://letzgo.herokuapp.com/api/artists', httpOptions).pipe(map (data => data))
@@ -35,6 +36,7 @@ export class ArtistService {
   }
 
   deleteArtist(artistId: string) {
-    this.http.delete<any>('https://letzgo.herokuapp.com/api/artists/' + artistId, httpOptions);
+    this.http.delete<any>('' +
+      '' + artistId, httpOptions);
   }
 }

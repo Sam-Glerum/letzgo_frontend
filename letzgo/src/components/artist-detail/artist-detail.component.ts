@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Artist} from "../../artist";
 import {ArtistService} from "../../app/services/artistService/artist.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-artist-detail',
@@ -12,7 +12,7 @@ export class ArtistDetailComponent implements OnInit {
   artist: Artist;
   artistId = '';
 
-  constructor(private artistService: ArtistService, private route:ActivatedRoute) { }
+  constructor(private artistService: ArtistService, private route:ActivatedRoute, private router: Router) { }
 
   getArtistId() {
     this.route.params.subscribe(param => {
@@ -30,6 +30,7 @@ export class ArtistDetailComponent implements OnInit {
 
   deleteArtist() {
     this.artistService.deleteArtist(this.artistId);
+    this.router.navigate(["/artists"]);
   }
 
   ngOnInit() {
