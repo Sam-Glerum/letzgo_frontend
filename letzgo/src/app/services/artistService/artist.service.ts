@@ -19,11 +19,11 @@ export class ArtistService {
   }
 
   getArtists(): Observable<Artist[]> {
-    return this.http.get<any[]>('https://letzgo.herokuapp.com/api/artists', httpOptions).pipe(map (data => data))
+    return this.http.get<any[]>('https://letzgo.herokuapp.com/api/artists', this.httpOptions).pipe(map (data => data))
   }
 
   getArtist(artistId: string): Observable<Artist> {
-    return this.http.get<any>('https://letzgo.herokuapp.com/api/artists/' + artistId, httpOptions).pipe(map(data => data));
+    return this.http.get<any>('https://letzgo.herokuapp.com/api/artists/' + artistId, this.httpOptions).pipe(map(data => data));
   }
 
   addArtist(name: string, imageUrl: string, genre: string, description: string){
@@ -32,11 +32,11 @@ export class ArtistService {
       "picture": imageUrl,
       "genre": genre,
       "description": description
-    }, httpOptions)
+    }, this.httpOptions)
   }
 
   deleteArtist(artistId: string) {
     this.http.delete<any>('' +
-      '' + artistId, httpOptions);
+      '' + artistId, this.httpOptions);
   }
 }
