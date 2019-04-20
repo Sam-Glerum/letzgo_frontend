@@ -24,4 +24,10 @@ export class ConcertService {
   getConcert(concertId: string): Observable<Concert> {
     return this.http.get<Concert>('https://letzgo.herokuapp.com/api/concerts/' + concertId, httpOptions).pipe(map (data => data))
   }
+
+  deleteConcert(concertId: string): void {
+    this.http.delete('https://letzgo.herokuapp.com/api/concerts/' + concertId, httpOptions).subscribe((concert) => {
+      console.log("deleted " + concert);
+    });
+  }
 }

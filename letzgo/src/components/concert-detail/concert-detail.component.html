@@ -7,7 +7,7 @@
       <mat-card-content><b>Address</b> <br> {{concert.concert.street}} {{concert.concert.houseNumber}}, {{ concert.concert.zipCode}} {{ concert.concert.city }}</mat-card-content>
       <mat-card-content><b>Price</b> <br> {{concert.concert.price.$numberDecimal}},-</mat-card-content>
       <button class="buyButton" mat-raised-button color="primary" (click)="buyTicket()">Buy Ticket</button>
-      <button class="deleteButton" mat-raised-button color="primary" (click)="deleteTicket()">Delete Ticket</button>
+      <button class="deleteButton" mat-raised-button color="primary" (click)="deleteConcert()">Delete Concert</button>
       <button id="backButton" mat-raised-button color="primary" (click)="goBack()">Go Back</button>
     </mat-card>
   </div>
