@@ -4,7 +4,6 @@
     <list default="true" id="ddb4faaa-737b-473a-80c7-f3d5ccb70011" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/letzgo/src/app/services/artistService/artist.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/letzgo/src/app/services/artistService/artist.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/letzgo/src/components/artist-detail/artist-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/letzgo/src/components/artist-detail/artist-detail.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,90 +16,85 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/letzgo/src/app/app.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="33" column="76" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="76" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="artist.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist/artist.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="artist.service.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/letzgo/src/app/services/artistService/artist.service.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-                  <folding>
-                    <element signature="e#0#43#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="register.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/letzgo/src/components/register/register.component.ts">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file leaf-file-name="authentication.service.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/letzgo/src/app/services/authenticationService/authentication.service.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-39" />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="artist.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist/artist.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="artist-detail.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist-detail/artist-detail.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="add-artist.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/letzgo/src/components/add-artist/add-artist.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="50" selection-start-column="50" selection-end-column="50" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="authentication.service.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/letzgo/src/app/services/authenticationService/authentication.service.ts">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/letzgo/src/app/app.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="76" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="artist.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist/artist.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="82" lean-forward="true" selection-start-line="1" selection-start-column="82" selection-end-line="1" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="artist.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/letzgo/src/app/services/artistService/artist.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authentication.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/letzgo/src/app/services/authenticationService/authentication.service.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="artist.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist/artist.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="artist-detail.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist-detail/artist-detail.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-artist.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/letzgo/src/components/add-artist/add-artist.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="67" lean-forward="true" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-artist.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/letzgo/src/components/add-artist/add-artist.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+              <folding>
+                <element signature="n#style#0;n#div#4;n#div#0;n#form#0;n#mat-card#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -162,10 +156,10 @@
         <option value="$PROJECT_DIR$/letzgo/src/components/artist-detail/artist-detail.component.css" />
         <option value="$PROJECT_DIR$/letzgo/src/components/artist/artist.component.css" />
         <option value="$PROJECT_DIR$/letzgo/src/components/artist/artist.component.html" />
-        <option value="$PROJECT_DIR$/letzgo/src/components/add-artist/add-artist.component.ts" />
         <option value="$PROJECT_DIR$/letzgo/src/components/artist/artist.component.ts" />
         <option value="$PROJECT_DIR$/letzgo/src/components/artist-detail/artist-detail.component.ts" />
         <option value="$PROJECT_DIR$/letzgo/src/app/services/artistService/artist.service.ts" />
+        <option value="$PROJECT_DIR$/letzgo/src/components/add-artist/add-artist.component.ts" />
       </list>
     </option>
   </component>
@@ -180,6 +174,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/letzgo/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -1447,9 +1444,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
-    <option name="width" value="1682" />
-    <option name="height" value="1051" />
+    <option name="x" value="1679" />
+    <option name="y" value="28" />
+    <option name="width" value="1922" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -1531,15 +1529,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="letzgo_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="letzgo_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="letzgo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="authenticationService" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="letzgo_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -1646,25 +1635,25 @@
       <workItem from="1552392553849" duration="599000" />
       <workItem from="1553621678497" duration="2044000" />
       <workItem from="1553684604320" duration="690000" />
+      <workItem from="1555619743873" duration="1590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70542000" />
+    <option name="totallyTimeSpent" value="72132000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1682" height="1051" extended-state="6" />
-    <editor active="true" />
+    <frame x="1679" y="28" width="1922" height="1053" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="TypeScript" order="11" visible="true" weight="0.32894737" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15672092" />
+      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32822758" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1563981" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33004385" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32932165" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1777,31 +1766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist/artist.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/letzgo/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="76" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist/artist.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/letzgo/src/components/add-artist/add-artist.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="50" selection-start-column="50" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1812,20 +1780,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/letzgo/src/components/register/register.component.ts">
+    <entry file="file://$PROJECT_DIR$/letzgo/src/app/services/authenticationService/authentication.service.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/letzgo/src/app/services/authenticationService/authentication.service.ts">
+    <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist/artist.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39" />
+        <state relative-caret-position="15">
+          <caret line="1" column="82" lean-forward="true" selection-start-line="1" selection-start-column="82" selection-end-line="1" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/letzgo/src/components/artist/artist.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/letzgo/src/app/services/artistService/artist.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="180">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/letzgo/src/components/add-artist/add-artist.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#div#0;n#form#0;n#mat-card#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/letzgo/src/components/add-artist/add-artist.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="67" lean-forward="true" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
