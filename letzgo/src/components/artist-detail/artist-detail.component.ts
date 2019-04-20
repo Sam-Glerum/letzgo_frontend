@@ -24,13 +24,16 @@ export class ArtistDetailComponent implements OnInit {
     this.artistService.getArtist(this.artistId)
       .subscribe(artist => {
         this.artist = artist;
-        console.log(artist);
       });
   }
 
   deleteArtist() {
     this.artistService.deleteArtist(this.artistId);
     this.router.navigate(["/artists"]);
+  }
+
+  openUpdateArtist() {
+    this.router.navigate(["/updateArtist"]);
   }
 
   ngOnInit() {
