@@ -18,11 +18,11 @@ export class ArtistService {
     }
   }
 
-  getArtists(): Observable<Artist[]> {
+  getArtists(): Observable<any> {
     return this.http.get<any>('https://letzgo.herokuapp.com/api/artists', this.httpOptions).pipe(map (data => data))
   }
 
-  getArtist(artistId: string): Observable<Artist> {
+  getArtist(artistId: string): Observable<any> {
     return this.http.get<any>('https://letzgo.herokuapp.com/api/artists/' + artistId, this.httpOptions).pipe(map(data => data));
   }
 
