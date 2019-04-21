@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'artistDetail/:id', component: ArtistDetailComponent, canActivate: [AuthenticationGuardService]},
   {path: 'tickets', component: TicketComponent, canActivate: [AuthenticationGuardService]},
   {path: 'ticketDetail/:id', component: TicketdetailComponent, canActivate: [AuthenticationGuardService]},
-  {path: 'updateArtist', component: UpdateArtistComponent, canActivate: [AuthenticationGuardService]},
+  {path: 'updateArtist/:id', component: UpdateArtistComponent, canActivate: [AuthenticationGuardService]},
   ];
 
 @NgModule({

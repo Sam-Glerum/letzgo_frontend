@@ -43,7 +43,7 @@ export class ArtistService {
       "picture": picture,
       "genre": genre,
       "description": description
-    }).subscribe((artist) => {
+    }, this.httpOptions).subscribe((artist) => {
       console.log("Updated artist " + artist);
     })
   }
