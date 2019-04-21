@@ -18,10 +18,7 @@ export class AddArtistComponent implements OnInit {
 
   constructor(private artistService: ArtistService, private router: Router) { }
 
-  ngOnInit() {
-  }
-
-  onSubmit() {
+  addArtist() {
     let name = this.artistForm.controls.name.value;
     let imageUrl = this.artistForm.controls.imageUrl.value;
     let genre = this.artistForm.controls.genre.value;
@@ -29,5 +26,17 @@ export class AddArtistComponent implements OnInit {
     this.artistService.addArtist(name, imageUrl, genre, description);
     this.router.navigate(["/artists"])
   }
+
+  ngOnInit() {
+  }
+
+  // onSubmit() {
+  //   let name = this.artistForm.controls.name.value;
+  //   let imageUrl = this.artistForm.controls.imageUrl.value;
+  //   let genre = this.artistForm.controls.genre.value;
+  //   let description = this.artistForm.controls.description.value;
+  //   this.artistService.addArtist(name, imageUrl, genre, description);
+  //   this.router.navigate(["/artists"])
+  // }
 
 }

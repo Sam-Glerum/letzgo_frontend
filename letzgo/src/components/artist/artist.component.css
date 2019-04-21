@@ -11,3 +11,11 @@
   color: white;
   text-decoration: none;
 }
+
+.mat-card:hover {
+  background-color: #0d3349;
+}
+
+a:hover {
+  background-color: #0d3349;
+}

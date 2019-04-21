@@ -24,7 +24,7 @@
       </div>
 
       <div class="row col-md-6" style="margin-left: auto">
-        <button id="loginButton" type="submit" [disabled]="!artistForm.valid"><a routerLink="/artists">Submit</a></button>
+        <button id="loginButton"  (click)="addArtist()" [disabled]="!artistForm.valid">Submit</button>
       </div>
 
     </div>

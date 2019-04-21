@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {ArtistService} from "../../app/services/artistService/artist.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Artist} from "../../artist";
 
 @Component({
@@ -26,7 +26,7 @@ export class UpdateArtistComponent implements OnInit {
     description: new FormControl(this.artistDescription),
   });
 
-  constructor(private artistService: ArtistService, private route:ActivatedRoute) { }
+  constructor(private artistService: ArtistService, private route:ActivatedRoute, private router: Router) { }
 
   getArtistId() {
     this.route.params.subscribe(param => {
@@ -47,13 +47,15 @@ export class UpdateArtistComponent implements OnInit {
   }
 
 
-  updateArtist() {
+  updateArtist(): void {
     let name = this.artistForm.controls.name.value;
     let picture = this.artistForm.controls.picture.value;
     let genre = this.artistForm.controls.genre.value;
     let description = this.artistForm.controls.description.value;
+    this.artistService.updateArtist(this.artistId, name, picture, genre, description, "");
+    // this.router.navigate(["/artists/" + this.artistId]);
+    this.router.navigate(["/artistDetail/" + this.artistId]);
 
-    this.artistService.updateArtist(this.artistId, name, picture, genre, description);
   }
 
   ngOnInit() {
