@@ -16,6 +16,7 @@ import {UpdateArtistComponent} from "../components/update-artist/update-artist.c
 
 
 const routes: Routes = [
+  {path: '', component: LoginComponent},
   {path: 'concerts', component: ConcertComponent, canActivate: [AuthenticationGuardService]},
   {path: 'concertDetail/:id', component: ConcertDetailComponent, canActivate: [AuthenticationGuardService]},
   {path: 'login', component: LoginComponent},
