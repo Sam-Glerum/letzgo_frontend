@@ -52,7 +52,7 @@ export class UpdateArtistComponent implements OnInit {
     let picture = this.artistForm.controls.picture.value;
     let genre = this.artistForm.controls.genre.value;
     let description = this.artistForm.controls.description.value;
-    this.artistService.updateArtist(this.artistId, name, picture, genre, description, "");
+    this.artistService.updateArtist(this.artistId, name, picture, genre, description, "", "");
     // this.router.navigate(["/artists/" + this.artistId]);
     this.router.navigate(["/artistDetail/" + this.artistId]);
 

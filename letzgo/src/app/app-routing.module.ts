@@ -13,12 +13,14 @@ import {TicketdetailComponent} from "../components/ticketdetail/ticketdetail.com
 import { AuthenticationGuardService } from "./services/authenticationGuardService/authentication-guard.service";
 import {AddArtistComponent} from "../components/add-artist/add-artist.component";
 import {UpdateArtistComponent} from "../components/update-artist/update-artist.component";
+import {CreateConcertComponent} from "../components/create-concert/create-concert.component";
 
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'concerts', component: ConcertComponent, canActivate: [AuthenticationGuardService]},
   {path: 'concertDetail/:id', component: ConcertDetailComponent, canActivate: [AuthenticationGuardService]},
+  {path: 'createConcert', component: CreateConcertComponent, canActivate: [AuthenticationGuardService]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'artists', component: ArtistComponent, canActivate: [AuthenticationGuardService]},

@@ -25,6 +25,24 @@ export class ConcertService {
     return this.http.get<Concert>('https://letzgo.herokuapp.com/api/concerts/' + concertId, httpOptions).pipe(map (data => data))
   }
 
+  createConcert(name: string, date: Date, city: string, street: string, houseNumber: string, zipCode: string,
+                price: number, description: string, artists: []) {
+    this.http.post('https://letzgo.herokuapp.com/api/concerts/', {
+      "name": name,
+      "date": date,
+      "city": city,
+      "street": street,
+      "houseNumber": houseNumber,
+      "zipCode": zipCode,
+      "price": price,
+      "description": description,
+      "artists": artists
+      }
+    , httpOptions).subscribe((concert) => {
+      console.log("Created " + concert);
+    })
+  }
+
   deleteConcert(concertId: string): void {
     this.http.delete('https://letzgo.herokuapp.com/api/concerts/' + concertId, httpOptions).subscribe((concert) => {
       console.log("deleted " + concert);

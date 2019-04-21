@@ -38,13 +38,14 @@ export class ArtistService {
     })
   }
 
-  updateArtist(artistId: string, name: string, picture: string, genre: string, description: string, discography: string) {
+  updateArtist(artistId: string, name: string, picture: string, genre: string, description: string, discography: string, concert: string) {
     this.http.put('https://letzgo.herokuapp.com/api/artists/' + artistId, {
       "name": name,
       "picture": picture,
       "genre": genre,
       "description": description,
-      "discography": null
+      "discography": null,
+      "concerts": concert
     }, this.httpOptions).subscribe((artist) => {
       console.log("Updated artist " + artist);
     })

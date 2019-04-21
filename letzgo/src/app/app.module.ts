@@ -19,6 +19,7 @@ import { LoginDetailComponent } from '../components/login-detail/login-detail.co
 import { TicketdetailComponent } from '../components/ticketdetail/ticketdetail.component';
 import { AddArtistComponent } from '../components/add-artist/add-artist.component';
 import { UpdateArtistComponent } from '../components/update-artist/update-artist.component';
+import { CreateConcertComponent } from '../components/create-concert/create-concert.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UpdateArtistComponent } from '../components/update-artist/update-artist
     LoginDetailComponent,
     TicketdetailComponent,
     AddArtistComponent,
-    UpdateArtistComponent
+    UpdateArtistComponent,
+    CreateConcertComponent
   ],
   imports: [
     BrowserModule,

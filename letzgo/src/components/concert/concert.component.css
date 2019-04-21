@@ -10,8 +10,29 @@
 
 }
 
+#addButton {
+  background-color: #4088FF;
+  color: white;
+}
+
+#addButton:hover {
+  background-color: #0d3349;
+}
+
+#buttonDiv {
+  margin-top: 10px;
+}
 
 .mat-card-title {
   color: white;
   text-decoration: none;
 }
+
+.mat-card:hover {
+  background-color: #0d3349;
+}
+
+a:hover {
+  background-color: #0d3349;
+}
+
